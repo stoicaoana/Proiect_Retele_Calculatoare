@@ -1,0 +1,9 @@
+Partajarea de obiecte in memorie:
+Clientul se conecteaza la server si primeste o lista de chei, fiecare cheie identificand un obiect publicat pe server de clientii conectati;
+Un client poate cauta un obiect pe server dupa cheie;
+Server-ul mentine un dictionar cu asocierile dintre chei si clientul pe care se gaseste obiectul corespunzator unei chei;
+La primirea unei solicitari de regasire a unui obiect dupa cheie, server-ul identifica pe ce client se afla obiectul si solicita transferarea continutului obiectului respectiv de pe clientul care-l stocheaza;
+In momentul primirii obiectului, server-ul il livreaza clientului care l-a solicitat;
+Un client poate publica un nou obiect pe server prin trimiterea unei chei care este asociata obiectului;
+Server-ul verifica unicitatea cheii in functie de care accepta inregistrarea obiectului in dictionar, notificand toti clientii conectati cu noua cheie publicata;
+Un client poate sterge o cheie de pe server publicata de el in prealabil, caz in care server-ul va notifica toti clientii conectati pentru stergerea cheii respective din lista.
